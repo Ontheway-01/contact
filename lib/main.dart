@@ -13,13 +13,21 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children:[
-          Icon(Icons.star),
-          Icon(Icons.start),
-          ]
-        ),
+        appBar: AppBar(title: Text('앱임')),
+        body: Text('안녕'),
+        bottomNavigationBar: BottomAppBar(
+          child: SizedBox(
+            height: 70,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Icon(Icons.call),
+                Icon(Icons.message),
+                Icon(Icons.contact_page)
+              ],
+            ),
+          ),
+        )
       )
     );
   }
